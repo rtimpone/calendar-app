@@ -18,6 +18,8 @@
 		FB30ADDA20E7DCFC003D4862 /* CalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = FB30ADD820E7DCFC003D4862 /* CalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB30ADDD20E7DCFC003D4862 /* CalendarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB30ADD620E7DCFC003D4862 /* CalendarView.framework */; };
 		FB30ADDE20E7DCFC003D4862 /* CalendarView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB30ADD620E7DCFC003D4862 /* CalendarView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB30ADE320E7DDE9003D4862 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30ADE220E7DDE8003D4862 /* EventViewModel.swift */; };
+		FB30ADE520E7DEE8003D4862 /* CalendarPermissionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30ADE420E7DEE8003D4862 /* CalendarPermissionHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		FB30ADD620E7DCFC003D4862 /* CalendarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB30ADD820E7DCFC003D4862 /* CalendarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
 		FB30ADD920E7DCFC003D4862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB30ADE220E7DDE8003D4862 /* EventViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		FB30ADE420E7DEE8003D4862 /* CalendarPermissionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPermissionHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 			children = (
 				FB30ADC620E7DCF0003D4862 /* CalendarKit.h */,
 				FB30ADC720E7DCF0003D4862 /* Info.plist */,
+				FB30ADE220E7DDE8003D4862 /* EventViewModel.swift */,
+				FB30ADE420E7DEE8003D4862 /* CalendarPermissionHandler.swift */,
 			);
 			path = CalendarKit;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 					};
 					FB30ADC320E7DCF0003D4862 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					FB30ADD520E7DCFC003D4862 = {
 						CreatedOnToolsVersion = 10.0;
@@ -322,6 +329,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB30ADE320E7DDE9003D4862 /* EventViewModel.swift in Sources */,
+				FB30ADE520E7DEE8003D4862 /* CalendarPermissionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +493,7 @@
 		FB30ADBB20E7D815003D4862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HTVQW2NNE8;
@@ -502,6 +512,7 @@
 		FB30ADBC20E7D815003D4862 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HTVQW2NNE8;
@@ -520,6 +531,7 @@
 		FB30ADCD20E7DCF0003D4862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -538,6 +550,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.robtimpone.CalendarKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -548,6 +561,7 @@
 		FB30ADCE20E7DCF0003D4862 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
