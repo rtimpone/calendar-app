@@ -11,12 +11,13 @@ import Foundation
 
 public struct Event {
     
-    var title: String
-    var location: String? = nil
-    var startTime: String
-    var endTime: String
-    var isAllDay: Bool
-    var calendar: String
+    public var title: String
+    public var location: String? = nil
+    public var startTime: String
+    public var endTime: String
+    public var isAllDay: Bool
+    public var calendar: String
+    public var calendarColor: UIColor
     
     init(event: EKEvent) {
         
@@ -30,7 +31,9 @@ public struct Event {
         endTime = Event.timeString(from: event.endDate)
         
         isAllDay = event.isAllDay
+        
         calendar = event.calendar.title
+        calendarColor = UIColor(cgColor: event.calendar.cgColor)
     }
     
     var consoleOutput: String {

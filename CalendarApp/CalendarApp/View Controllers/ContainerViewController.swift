@@ -12,17 +12,26 @@ import UIKit
 class ContainerViewController: UIViewController {
 
     let eventsFetcher = EventsFetcher()
+    var eventListController: EventListViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         CalendarPermissionHandler.requestPermission() { status in
-            //jump to today
+            switch status {
+            case .granted:
+                #warning("jump to today")
+            case .denied:
+                #warning("show permission message")
+            }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? CalendarViewController {
-            vc.delegate = self
+        if let cvc = segue.destination as? CalendarViewController {
+            cvc.delegate = self
+        }
+        else if let elvc = segue.destination as? EventListViewController {
+            eventListController = elvc
         }
     }
 }
@@ -30,9 +39,7 @@ class ContainerViewController: UIViewController {
 extension ContainerViewController: CalendarViewControllerDelegate {
     
     func didSelectDate(_ date: Date) {
-        let events = eventsFetcher.fetchEvents(on: date)
-        for event in events {
-            print(event)
-        }
+        let events = eventsFetcher.fetchEvents(for: date)
+        eventListController.displayEvents(events)
     }
 }

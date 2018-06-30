@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -27,11 +28,21 @@
                                     <segue destination="ncT-IP-nqy" kind="embed" id="gu8-4o-TVD"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBt-Bt-pCg">
+                                <rect key="frame" x="0.0" y="494" width="375" height="284"/>
+                                <connections>
+                                    <segue destination="iW2-dQ-akK" kind="embed" id="RuT-20-06V"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" name="purple"/>
                         <constraints>
+                            <constraint firstItem="cBt-Bt-pCg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0tr-o0-3GI"/>
                             <constraint firstItem="5xi-mH-cVV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="13m-Yk-fX6"/>
+                            <constraint firstItem="cBt-Bt-pCg" firstAttribute="top" secondItem="5xi-mH-cVV" secondAttribute="bottom" id="2KO-1k-uSc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cBt-Bt-pCg" secondAttribute="bottom" id="3rN-Ca-KPx"/>
                             <constraint firstItem="5xi-mH-cVV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Gg-t3-cFR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cBt-Bt-pCg" secondAttribute="trailing" id="Bpi-Tc-pv8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5xi-mH-cVV" secondAttribute="trailing" id="jVi-Wb-i6g"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -39,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="205.59999999999999" y="160.56971514242881"/>
+            <point key="canvasLocation" x="205.59999999999999" y="160.34482758620689"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="uUU-Ed-fyN">
@@ -68,6 +79,7 @@
                             <constraint firstAttribute="trailing" secondItem="xvr-n4-kF3" secondAttribute="trailing" id="tET-hG-59M"/>
                             <constraint firstAttribute="bottom" secondItem="xvr-n4-kF3" secondAttribute="bottom" id="yUx-zD-dSB"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="EDD-o9-ksy"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="xvr-n4-kF3" id="hKI-My-9Wd"/>
@@ -76,6 +88,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTP-hz-GcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="993" y="26"/>
+        </scene>
+        <!--Event List View Controller-->
+        <scene sceneID="2Tf-fp-HWq">
+            <objects>
+                <viewController id="iW2-dQ-akK" customClass="EventListViewController" customModule="CalendarApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZJF-RT-6k3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EbX-47-aMq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EbX-47-aMq" firstAttribute="top" secondItem="ZJF-RT-6k3" secondAttribute="top" id="7ea-gF-rab"/>
+                            <constraint firstAttribute="trailing" secondItem="EbX-47-aMq" secondAttribute="trailing" id="EeQ-fw-AGR"/>
+                            <constraint firstAttribute="bottom" secondItem="EbX-47-aMq" secondAttribute="bottom" id="cnU-zU-ddR"/>
+                            <constraint firstItem="EbX-47-aMq" firstAttribute="leading" secondItem="ZJF-RT-6k3" secondAttribute="leading" id="kFp-TP-SKz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="EbX-47-aMq" id="7ZL-Ke-CyG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xc0-hA-xe7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="355"/>
         </scene>
     </scenes>
     <resources>

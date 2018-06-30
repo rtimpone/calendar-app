@@ -15,7 +15,7 @@ public class EventsFetcher {
     
     public init(){}
     
-    public func fetchEvents(on date: Date) -> [Event] {
+    public func fetchEvents(for date: Date) -> [Event] {
         
         let startOfDay = Calendar.current.startOfDay(for: date)
         let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
