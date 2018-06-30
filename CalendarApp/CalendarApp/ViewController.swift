@@ -11,10 +11,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let eventsFetcher = EventsFetcher()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         CalendarPermissionHandler.requestPermission() { status in
-            print(status)
+            self.printEventsForToday()
+        }
+    }
+    
+    func printEventsForToday() {
+        let today = Date().addingTimeInterval(-1 * 60 * 60 * 24)
+        let events = eventsFetcher.fetchEvents(on: today)
+        for event in events {
+            print(event)
         }
     }
 }

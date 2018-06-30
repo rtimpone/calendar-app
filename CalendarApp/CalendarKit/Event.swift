@@ -1,6 +1,6 @@
 //
-//  EventViewModel.swift
-//  EventKitDemo
+//  Event.swift
+//  CalendarKit
 //
 //  Created by Rob Timpone on 6/6/18.
 //  Copyright © 2018 Rob Timpone. All rights reserved.
@@ -9,7 +9,7 @@
 import EventKit
 import Foundation
 
-struct EventViewModel {
+public struct Event {
     
     var title: String
     var location: String? = nil
@@ -26,8 +26,8 @@ struct EventViewModel {
             self.location = location
         }
         
-        startTime = EventViewModel.timeString(from: event.startDate)
-        endTime = EventViewModel.timeString(from: event.endDate)
+        startTime = Event.timeString(from: event.startDate)
+        endTime = Event.timeString(from: event.endDate)
         
         isAllDay = event.isAllDay
         calendar = event.calendar.title
@@ -54,7 +54,7 @@ struct EventViewModel {
     }
 }
 
-private extension EventViewModel {
+private extension Event {
     
     private static var dateFormatter: DateFormatter {
         let df = DateFormatter()
@@ -63,6 +63,6 @@ private extension EventViewModel {
     }
     
     private static func timeString(from date: Date) -> String {
-        return EventViewModel.dateFormatter.string(from: date)
+        return Event.dateFormatter.string(from: date)
     }
 }
