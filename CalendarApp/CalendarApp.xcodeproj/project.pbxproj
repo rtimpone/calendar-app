@@ -18,6 +18,9 @@
 		FB30ADDA20E7DCFC003D4862 /* CalendarView.h in Headers */ = {isa = PBXBuildFile; fileRef = FB30ADD820E7DCFC003D4862 /* CalendarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FB30ADDD20E7DCFC003D4862 /* CalendarView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB30ADD620E7DCFC003D4862 /* CalendarView.framework */; };
 		FB30ADDE20E7DCFC003D4862 /* CalendarView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB30ADD620E7DCFC003D4862 /* CalendarView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB30ADE320E7DDE9003D4862 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30ADE220E7DDE8003D4862 /* Event.swift */; };
+		FB30ADE520E7DEE8003D4862 /* CalendarPermissionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30ADE420E7DEE8003D4862 /* CalendarPermissionHandler.swift */; };
+		FB30ADE720E7E247003D4862 /* EventsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30ADE620E7E247003D4862 /* EventsFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		FB30ADD620E7DCFC003D4862 /* CalendarView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB30ADD820E7DCFC003D4862 /* CalendarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarView.h; sourceTree = "<group>"; };
 		FB30ADD920E7DCFC003D4862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB30ADE220E7DDE8003D4862 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		FB30ADE420E7DEE8003D4862 /* CalendarPermissionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPermissionHandler.swift; sourceTree = "<group>"; };
+		FB30ADE620E7E247003D4862 /* EventsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,9 @@
 			children = (
 				FB30ADC620E7DCF0003D4862 /* CalendarKit.h */,
 				FB30ADC720E7DCF0003D4862 /* Info.plist */,
+				FB30ADE420E7DEE8003D4862 /* CalendarPermissionHandler.swift */,
+				FB30ADE220E7DDE8003D4862 /* Event.swift */,
+				FB30ADE620E7E247003D4862 /* EventsFetcher.swift */,
 			);
 			path = CalendarKit;
 			sourceTree = "<group>";
@@ -255,6 +264,7 @@
 					};
 					FB30ADC320E7DCF0003D4862 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					FB30ADD520E7DCFC003D4862 = {
 						CreatedOnToolsVersion = 10.0;
@@ -322,6 +332,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB30ADE320E7DDE9003D4862 /* Event.swift in Sources */,
+				FB30ADE520E7DEE8003D4862 /* CalendarPermissionHandler.swift in Sources */,
+				FB30ADE720E7E247003D4862 /* EventsFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -472,7 +485,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -484,10 +497,12 @@
 		FB30ADBB20E7D815003D4862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HTVQW2NNE8;
 				INFOPLIST_FILE = CalendarApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,10 +517,12 @@
 		FB30ADBC20E7D815003D4862 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HTVQW2NNE8;
 				INFOPLIST_FILE = CalendarApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -520,6 +537,7 @@
 		FB30ADCD20E7DCF0003D4862 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -530,6 +548,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CalendarKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,6 +557,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.robtimpone.CalendarKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -548,6 +568,7 @@
 		FB30ADCE20E7DCF0003D4862 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -558,6 +579,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CalendarKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,6 +608,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CalendarView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,6 +637,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CalendarView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
