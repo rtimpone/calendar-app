@@ -61,7 +61,7 @@ private extension FontSizeCalculator {
     
     static func calculateWidth(toFitText text: String, withFont font: UIFont) -> CGFloat {
         
-        let attributes = [NSAttributedStringKey.font: font]
+        let attributes = [NSAttributedString.Key.font: font]
         let size = (text as NSString).size(withAttributes: attributes)
         return size.width
     }

@@ -87,7 +87,7 @@ extension CalendarCollectionViewHandler: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         switch kind {
-        case UICollectionElementKindSectionHeader:
+        case UICollectionView.elementKindSectionHeader:
             
             let header = dequeueSupplementaryView(ofType: HeaderView.self, ofKind: kind, for: indexPath)
             header.setTextOfLabels(forDays: headerDayLetters)
