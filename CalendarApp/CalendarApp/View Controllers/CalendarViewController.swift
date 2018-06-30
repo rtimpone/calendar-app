@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 
+protocol CalendarViewControllerDelegate: class {
+    func didSelectDate(_ date: Date)
+}
+
 class CalendarViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    weak var delegate: CalendarViewControllerDelegate!
     
     var collectionViewHandler = CalendarCollectionViewHandler()
     
@@ -31,5 +36,6 @@ extension CalendarViewController: CalendarCollectionViewHandlerDelegate {
     
     func didSelectDate(_ date: Date) {
         print("user selected item '\(date)'")
+        delegate.didSelectDate(date)
     }
 }

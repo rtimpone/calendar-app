@@ -16,15 +16,23 @@ class ContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         CalendarPermissionHandler.requestPermission() { status in
-            self.printEventsForToday()
+            //jump to today
         }
     }
     
-    func printEventsForToday() {
-        let today = Date().addingTimeInterval(-1 * 60 * 60 * 24)
-        let events = eventsFetcher.fetchEvents(on: today)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? CalendarViewController {
+            vc.delegate = self
+        }
+    }
+}
+
+extension ContainerViewController: CalendarViewControllerDelegate {
+    
+    func didSelectDate(_ date: Date) {
+        let events = eventsFetcher.fetchEvents(on: date)
         for event in events {
-//            print(event)
+            print(event)
         }
     }
 }
