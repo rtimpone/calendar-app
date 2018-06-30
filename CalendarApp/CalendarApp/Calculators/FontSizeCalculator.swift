@@ -23,7 +23,7 @@ struct FontSizeCalculator {
                 minFontSizeThatFitsWidth = fontSize
             }
         }
-        
+
         return minFontSizeThatFitsWidth
     }
 }
@@ -55,7 +55,7 @@ private extension FontSizeCalculator {
                 doneCalculating = true
             }
         }
-        
+
         return calculatedFontSize
     }
     

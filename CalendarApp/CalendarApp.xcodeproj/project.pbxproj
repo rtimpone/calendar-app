@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB30ADAC20E7D813003D4862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30ADAB20E7D813003D4862 /* AppDelegate.swift */; };
-		FB30ADAE20E7D813003D4862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30ADAD20E7D813003D4862 /* ViewController.swift */; };
+		FB30ADAE20E7D813003D4862 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30ADAD20E7D813003D4862 /* ContainerViewController.swift */; };
 		FB30ADB120E7D813003D4862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB30ADAF20E7D813003D4862 /* Main.storyboard */; };
 		FB30ADB320E7D815003D4862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB30ADB220E7D815003D4862 /* Assets.xcassets */; };
 		FB30ADB620E7D815003D4862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB30ADB420E7D815003D4862 /* LaunchScreen.storyboard */; };
@@ -30,6 +30,7 @@
 		FB30AE0420E7E73F003D4862 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB30AE0120E7E73F003D4862 /* HeaderView.xib */; };
 		FB30AE0520E7E73F003D4862 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30AE0220E7E73F003D4862 /* HeaderView.swift */; };
 		FB30AE0620E7E73F003D4862 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30AE0320E7E73F003D4862 /* CircleView.swift */; };
+		FB30AE0820E7E9C5003D4862 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30AE0720E7E9C5003D4862 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +60,7 @@
 /* Begin PBXFileReference section */
 		FB30ADA820E7D813003D4862 /* CalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB30ADAB20E7D813003D4862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB30ADAD20E7D813003D4862 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB30ADAD20E7D813003D4862 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		FB30ADB020E7D813003D4862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB30ADB220E7D815003D4862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB30ADB520E7D815003D4862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		FB30AE0120E7E73F003D4862 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		FB30AE0220E7E73F003D4862 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		FB30AE0320E7E73F003D4862 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		FB30AE0720E7E9C5003D4862 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +180,8 @@
 		FB30ADE920E7E62F003D4862 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FB30ADAD20E7D813003D4862 /* ViewController.swift */,
+				FB30AE0720E7E9C5003D4862 /* CalendarViewController.swift */,
+				FB30ADAD20E7D813003D4862 /* ContainerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -351,9 +354,10 @@
 				FB30ADF720E7E6B6003D4862 /* CollectionViewDataSource.swift in Sources */,
 				FB30ADEB20E7E66B003D4862 /* FontSizeCalculator.swift in Sources */,
 				FB30ADFF20E7E705003D4862 /* Themes.swift in Sources */,
-				FB30ADAE20E7D813003D4862 /* ViewController.swift in Sources */,
+				FB30ADAE20E7D813003D4862 /* ContainerViewController.swift in Sources */,
 				FB30ADEF20E7E68F003D4862 /* DayCell.swift in Sources */,
 				FB30ADF920E7E6B6003D4862 /* CalendarCollectionViewHandler.swift in Sources */,
+				FB30AE0820E7E9C5003D4862 /* CalendarViewController.swift in Sources */,
 				FB30AE0520E7E73F003D4862 /* HeaderView.swift in Sources */,
 				FB30ADFC20E7E6DD003D4862 /* NibBased.swift in Sources */,
 				FB30ADAC20E7D813003D4862 /* AppDelegate.swift in Sources */,

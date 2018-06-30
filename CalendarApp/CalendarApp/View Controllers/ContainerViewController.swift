@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ContainerViewController.swift
 //  CalendarApp
 //
 //  Created by Rob Timpone on 6/30/18.
@@ -9,7 +9,7 @@
 import CalendarKit
 import UIKit
 
-class ViewController: UIViewController {
+class ContainerViewController: UIViewController {
 
     let eventsFetcher = EventsFetcher()
     
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         let today = Date().addingTimeInterval(-1 * 60 * 60 * 24)
         let events = eventsFetcher.fetchEvents(on: today)
         for event in events {
-            print(event)
+//            print(event)
         }
     }
 }
