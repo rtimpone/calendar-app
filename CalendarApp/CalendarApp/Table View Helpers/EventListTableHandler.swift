@@ -37,7 +37,7 @@ class EventListTableHandler: TableViewHandler {
 extension EventListTableHandler: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        return 52
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
