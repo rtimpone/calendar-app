@@ -15,7 +15,11 @@ class EventWithoutLocationCell: UITableViewCell, NibBased {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeRangeLabel: UILabel!
     
-    func update(for event: Event) {
+    func update(for event: Event, theme: Theme) {
+        
+        let textColor = theme.eventTextColor
+        titleLabel.textColor = textColor
+        timeRangeLabel.textColor = textColor
         
         titleLabel.text = event.title
         timeRangeLabel.text = event.timeRangeString

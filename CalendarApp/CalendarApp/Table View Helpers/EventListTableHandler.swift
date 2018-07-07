@@ -50,12 +50,12 @@ extension EventListTableHandler: UITableViewDataSource {
         
         if event.location == nil {
             let cell = dequeueReusableCell(ofType: EventWithoutLocationCell.self, for: indexPath)
-            cell.update(for: event)
+            cell.update(for: event, theme: theme)
             return cell
         }
         else {
             let cell = dequeueReusableCell(ofType: EventWithLocationCell.self, for: indexPath)
-            cell.update(for: event)
+            cell.update(for: event, theme: theme)
             return cell
         }
     }

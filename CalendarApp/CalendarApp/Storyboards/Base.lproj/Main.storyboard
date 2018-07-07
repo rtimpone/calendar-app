@@ -30,6 +30,7 @@
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBt-Bt-pCg">
                                 <rect key="frame" x="0.0" y="494" width="375" height="284"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="iW2-dQ-akK" kind="embed" id="RuT-20-06V"/>
                                 </connections>
@@ -99,7 +100,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EbX-47-aMq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,6 +110,7 @@
                             <constraint firstAttribute="bottom" secondItem="EbX-47-aMq" secondAttribute="bottom" id="cnU-zU-ddR"/>
                             <constraint firstItem="EbX-47-aMq" firstAttribute="leading" secondItem="ZJF-RT-6k3" secondAttribute="leading" id="kFp-TP-SKz"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="xND-qh-BkO"/>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="EbX-47-aMq" id="7ZL-Ke-CyG"/>

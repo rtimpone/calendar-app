@@ -16,6 +16,7 @@ protocol Theme {
     var selectedDateColor: UIColor { get }
     var dateTextSelectedColor: UIColor { get }
     var dateTextUnselectedColor: UIColor { get }
+    var eventTextColor: UIColor { get }
 }
 
 struct Themes {
@@ -30,6 +31,7 @@ struct Themes {
         var selectedDateColor: UIColor = ColorPalette.pink.colorValue
         var dateTextSelectedColor: UIColor = .white
         var dateTextUnselectedColor: UIColor = ColorPalette.lightPurple.colorValue
+        var eventTextColor: UIColor = .white
     }
 }
 

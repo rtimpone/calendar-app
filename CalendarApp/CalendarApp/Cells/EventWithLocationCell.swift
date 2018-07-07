@@ -16,7 +16,12 @@ class EventWithLocationCell: UITableViewCell, NibBased {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var timeRangeLabel: UILabel!
     
-    func update(for event: Event) {
+    func update(for event: Event, theme: Theme) {
+        
+        let textColor = theme.eventTextColor
+        titleLabel.textColor = textColor
+        locationLabel.textColor = textColor
+        timeRangeLabel.textColor = textColor
         
         titleLabel.text = event.title
         locationLabel.text = event.location

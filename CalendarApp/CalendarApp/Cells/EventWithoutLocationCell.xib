@@ -19,18 +19,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxY-uW-cqk" userLabel="Left Label">
-                        <rect key="frame" x="20" y="13" width="281" height="18"/>
+                        <rect key="frame" x="20" y="13" width="292" height="18"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1Y-5C-zPN">
-                        <rect key="frame" x="317" y="11.5" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="328" y="14.5" width="31" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="R1Y-5C-zPN" firstAttribute="centerY" secondItem="G05-Xx-mvO" secondAttribute="centerY" id="EWi-Pd-DYj"/>
                     <constraint firstItem="pxY-uW-cqk" firstAttribute="centerY" secondItem="G05-Xx-mvO" secondAttribute="centerY" id="Eln-Z0-nol"/>
@@ -39,6 +40,7 @@
                     <constraint firstItem="R1Y-5C-zPN" firstAttribute="leading" secondItem="pxY-uW-cqk" secondAttribute="trailing" constant="16" id="pba-jh-nF9"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="timeRangeLabel" destination="R1Y-5C-zPN" id="Mw4-8O-pDa"/>
                 <outlet property="titleLabel" destination="pxY-uW-cqk" id="kne-nT-j3i"/>
