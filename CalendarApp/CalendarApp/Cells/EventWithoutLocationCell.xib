@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxY-uW-cqk" userLabel="Left Label">
-                        <rect key="frame" x="20" y="13" width="292" height="18"/>
+                        <rect key="frame" x="16" y="13" width="304" height="18"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,9 +35,9 @@
                 <constraints>
                     <constraint firstItem="R1Y-5C-zPN" firstAttribute="centerY" secondItem="G05-Xx-mvO" secondAttribute="centerY" id="EWi-Pd-DYj"/>
                     <constraint firstItem="pxY-uW-cqk" firstAttribute="centerY" secondItem="G05-Xx-mvO" secondAttribute="centerY" id="Eln-Z0-nol"/>
-                    <constraint firstItem="pxY-uW-cqk" firstAttribute="leading" secondItem="G05-Xx-mvO" secondAttribute="leading" constant="20" id="KeX-fX-Zn9"/>
+                    <constraint firstItem="pxY-uW-cqk" firstAttribute="leading" secondItem="G05-Xx-mvO" secondAttribute="leading" constant="16" id="KeX-fX-Zn9"/>
                     <constraint firstAttribute="trailing" secondItem="R1Y-5C-zPN" secondAttribute="trailing" constant="16" id="Vjk-3T-Yad"/>
-                    <constraint firstItem="R1Y-5C-zPN" firstAttribute="leading" secondItem="pxY-uW-cqk" secondAttribute="trailing" constant="16" id="pba-jh-nF9"/>
+                    <constraint firstItem="R1Y-5C-zPN" firstAttribute="leading" secondItem="pxY-uW-cqk" secondAttribute="trailing" constant="8" id="pba-jh-nF9"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
