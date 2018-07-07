@@ -35,16 +35,29 @@ class EventListTableHandler: TableViewHandler {
 }
 
 extension EventListTableHandler: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return events.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let event = events[indexPath.row]
-        let cell = dequeueReusableCell(ofType: EventCell.self, for: indexPath)
-        cell.update(for: event)
-        return cell
+        
+        if event.location == nil {
+            let cell = dequeueReusableCell(ofType: EventWithoutLocationCell.self, for: indexPath)
+            cell.update(for: event)
+            return cell
+        }
+        else {
+            let cell = dequeueReusableCell(ofType: EventWithLocationCell.self, for: indexPath)
+            cell.update(for: event)
+            return cell
+        }
     }
 }
 

@@ -31,9 +31,11 @@
 		FB30AE0520E7E73F003D4862 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30AE0220E7E73F003D4862 /* HeaderView.swift */; };
 		FB30AE0620E7E73F003D4862 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30AE0320E7E73F003D4862 /* CircleView.swift */; };
 		FB30AE0820E7E9C5003D4862 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB30AE0720E7E9C5003D4862 /* CalendarViewController.swift */; };
+		FB7E084620F12E5F00B5D636 /* EventWithLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7E084520F12E5F00B5D636 /* EventWithLocationCell.swift */; };
+		FB7E084820F12E6600B5D636 /* EventWithLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7E084720F12E6600B5D636 /* EventWithLocationCell.xib */; };
+		FB7E084A20F12E7100B5D636 /* EventWithoutLocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7E084920F12E7100B5D636 /* EventWithoutLocationCell.swift */; };
+		FB7E084C20F12E7700B5D636 /* EventWithoutLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7E084B20F12E7700B5D636 /* EventWithoutLocationCell.xib */; };
 		FBE9DED120E7F26900AE85D3 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9DED020E7F26900AE85D3 /* EventListViewController.swift */; };
-		FBE9DED320E7F46200AE85D3 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9DED220E7F46200AE85D3 /* EventCell.swift */; };
-		FBE9DED520E7F46900AE85D3 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE9DED420E7F46900AE85D3 /* EventCell.xib */; };
 		FBE9DED820E7FA2300AE85D3 /* TableViewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9DED720E7FA2300AE85D3 /* TableViewHandler.swift */; };
 		FBE9DEDA20E7FB5F00AE85D3 /* EventListTableHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE9DED920E7FB5F00AE85D3 /* EventListTableHandler.swift */; };
 /* End PBXBuildFile section */
@@ -89,9 +91,11 @@
 		FB30AE0220E7E73F003D4862 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		FB30AE0320E7E73F003D4862 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		FB30AE0720E7E9C5003D4862 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		FB7E084520F12E5F00B5D636 /* EventWithLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWithLocationCell.swift; sourceTree = "<group>"; };
+		FB7E084720F12E6600B5D636 /* EventWithLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventWithLocationCell.xib; sourceTree = "<group>"; };
+		FB7E084920F12E7100B5D636 /* EventWithoutLocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventWithoutLocationCell.swift; sourceTree = "<group>"; };
+		FB7E084B20F12E7700B5D636 /* EventWithoutLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventWithoutLocationCell.xib; sourceTree = "<group>"; };
 		FBE9DED020E7F26900AE85D3 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
-		FBE9DED220E7F46200AE85D3 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
-		FBE9DED420E7F46900AE85D3 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		FBE9DED720E7FA2300AE85D3 /* TableViewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHandler.swift; sourceTree = "<group>"; };
 		FBE9DED920E7FB5F00AE85D3 /* EventListTableHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListTableHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,8 +207,10 @@
 			children = (
 				FB30ADED20E7E68F003D4862 /* DayCell.swift */,
 				FB30ADEE20E7E68F003D4862 /* DayCell.xib */,
-				FBE9DED220E7F46200AE85D3 /* EventCell.swift */,
-				FBE9DED420E7F46900AE85D3 /* EventCell.xib */,
+				FB7E084520F12E5F00B5D636 /* EventWithLocationCell.swift */,
+				FB7E084720F12E6600B5D636 /* EventWithLocationCell.xib */,
+				FB7E084920F12E7100B5D636 /* EventWithoutLocationCell.swift */,
+				FB7E084B20F12E7700B5D636 /* EventWithoutLocationCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -354,7 +360,8 @@
 				FB30AE0420E7E73F003D4862 /* HeaderView.xib in Resources */,
 				FB30ADB320E7D815003D4862 /* Assets.xcassets in Resources */,
 				FB30ADF020E7E68F003D4862 /* DayCell.xib in Resources */,
-				FBE9DED520E7F46900AE85D3 /* EventCell.xib in Resources */,
+				FB7E084C20F12E7700B5D636 /* EventWithoutLocationCell.xib in Resources */,
+				FB7E084820F12E6600B5D636 /* EventWithLocationCell.xib in Resources */,
 				FB30ADB120E7D813003D4862 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,16 +383,17 @@
 				FB30AE0620E7E73F003D4862 /* CircleView.swift in Sources */,
 				FBE9DED120E7F26900AE85D3 /* EventListViewController.swift in Sources */,
 				FBE9DED820E7FA2300AE85D3 /* TableViewHandler.swift in Sources */,
+				FB7E084620F12E5F00B5D636 /* EventWithLocationCell.swift in Sources */,
 				FB30ADF620E7E6B6003D4862 /* CollectionViewHandler.swift in Sources */,
 				FB30ADF720E7E6B6003D4862 /* CollectionViewDataSource.swift in Sources */,
 				FB30ADEB20E7E66B003D4862 /* FontSizeCalculator.swift in Sources */,
 				FB30ADFF20E7E705003D4862 /* Themes.swift in Sources */,
 				FB30ADAE20E7D813003D4862 /* ContainerViewController.swift in Sources */,
-				FBE9DED320E7F46200AE85D3 /* EventCell.swift in Sources */,
 				FB30ADEF20E7E68F003D4862 /* DayCell.swift in Sources */,
 				FB30ADF920E7E6B6003D4862 /* CalendarCollectionViewHandler.swift in Sources */,
 				FB30AE0820E7E9C5003D4862 /* CalendarViewController.swift in Sources */,
 				FB30AE0520E7E73F003D4862 /* HeaderView.swift in Sources */,
+				FB7E084A20F12E7100B5D636 /* EventWithoutLocationCell.swift in Sources */,
 				FB30ADFC20E7E6DD003D4862 /* NibBased.swift in Sources */,
 				FBE9DEDA20E7FB5F00AE85D3 /* EventListTableHandler.swift in Sources */,
 				FB30ADAC20E7D813003D4862 /* AppDelegate.swift in Sources */,

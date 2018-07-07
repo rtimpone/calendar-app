@@ -19,6 +19,10 @@ public struct Event {
     public var calendar: String
     public var calendarColor: UIColor
     
+    public var timeRangeString: String {
+        return isAllDay ? "All Day" : "\(startTime) - \(endTime)"
+    }
+    
     init(event: EKEvent) {
         
         title = event.title
@@ -34,26 +38,6 @@ public struct Event {
         
         calendar = event.calendar.title
         calendarColor = UIColor(cgColor: event.calendar.cgColor)
-    }
-    
-    var consoleOutput: String {
-        
-        var output = "\(title)\n"
-        
-        if isAllDay {
-            output += "All Day\n"
-        }
-        else {
-            output += "\(startTime) - \(endTime)\n"
-        }
-        
-        if let location = location {
-            output += "\(location)\n"
-        }
-        
-        output += "\(calendar)\n"
-        
-        return output
     }
 }
 
